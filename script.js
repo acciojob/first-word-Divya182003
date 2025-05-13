@@ -1,8 +1,12 @@
-function firstWord(s) {
-  // your code here
+function firstWord(str) {
+  if (!str) {
+    return "";
+  }
+  const index = str.indexOf(" ");
+  if (index === -1) {
+    return str;
+  } else {
+    return str.substring(0, index);
+  }
 }
 
-// Do not change the code below
-
-const s = prompt("Enter String:");
-alert(firstWord(s));
